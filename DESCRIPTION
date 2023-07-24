@@ -1,0 +1,29 @@
+Package: monitoraSSM
+Title: Modelos de Espaço de Estados para Programa Monitora
+Version: 0.0.0.9000
+Authors@R:
+    person(
+    given = "Elildo", 
+    family = "Carvalho Jr", 
+    email = "elildojr@gmail.com", 
+    role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-4356-2954"))
+Description: Ferramentas para análise de dados do Programa Monitora, componente florestal, alvo aves e mamíferos, protocolo básico. Limpeza e de dados, preparação de dados para modelo de espaço de estados (state-space-models).
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: 
+    R (>= 2.10)
+Imports: 
+    here,
+    tidyverse,
+    ggplot2,
+    R2jags
+LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr
