@@ -8,7 +8,6 @@
 #' @examples
 #' cruzar_taxon_uc()
 #' @import tidyverse
-#' @importFrom tidyverse %>%
 
 cruzar_taxon_uc <- function(myData) {
 

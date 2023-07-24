@@ -5,7 +5,7 @@
 #' @export
 #' @examples
 #' corrigir_nome_uc()
-#'
+#' @import tidyverse
 
 corrigir_nome_uc <- function(myData) {
 

@@ -17,5 +17,4 @@ Funçao para checar visualmente taxonomia dos dados do Monitora
 }
 \examples{
 checar_taxonomia()
-
 }

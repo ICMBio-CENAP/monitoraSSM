@@ -7,6 +7,7 @@
 #' Elildo Carvalho Jr
 #' @examples
 #' calc_tx_encontro()
+#' @import tidyverse
 
 calc_tx_encontro <- function(monitora, pop) {
 

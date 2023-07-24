@@ -17,5 +17,4 @@ Funçao para corrigir nomes das UCs
 }
 \examples{
 corrigir_nome_uc()
-
 }

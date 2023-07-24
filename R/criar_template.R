@@ -6,7 +6,6 @@
 #' @examples
 #' criar_template()
 #' @import tidyverse
-#' @importFrom tidyverse %>%
 
 criar_template <- function(monitora, pop) {
 

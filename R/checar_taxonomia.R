@@ -5,7 +5,7 @@
 #' @export
 #' @examples
 #' checar_taxonomia()
-#'
+#' @import tidyverse
 
 checar_taxonomia <- function(myData) {
 

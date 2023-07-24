@@ -5,7 +5,6 @@
 #' @examples
 #' grafico_pizza()
 #' @import tidyverse
-#' @importFrom tidyverse %>%
 
 grafico_pizza <- function() {
 

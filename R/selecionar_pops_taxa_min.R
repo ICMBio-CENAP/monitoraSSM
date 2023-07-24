@@ -8,7 +8,6 @@
 #' @examples
 #' selecionar_pops_taxa_min()
 #' @import tidyverse
-#' @importFrom tidyverse %>%
 
 # funcao para selecionar populacoes com taxa de encontro medio > 0.5
 selecionar_pops_taxa_min <- function(monitora, taxa_min = 0.5) {

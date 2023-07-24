@@ -7,7 +7,6 @@
 #' @examples
 #' plotar_G()
 #' @import tidyverse
-#' @importFrom tidyverse %>%
 
 # funcao para estimar media geometrica
 plotar_G <- function() {

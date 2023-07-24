@@ -6,7 +6,7 @@
 #' Elildo Carvalho Jr
 #' @examples
 #' calc_G()
-#'
+#' @import tidyverse
 
 # funcao para estimar media geometrica
 calc_G <- function(x) {

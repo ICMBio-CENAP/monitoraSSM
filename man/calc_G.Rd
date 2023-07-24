@@ -14,7 +14,6 @@ Funçao para estimar media geometrica
 }
 \examples{
 calc_G()
-
 }
 \author{
 Elildo Carvalho Jr
