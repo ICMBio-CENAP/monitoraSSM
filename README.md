@@ -25,8 +25,10 @@ Instalar o pacote **monitoraSSM** a partir de nosso github:
 
 ```r
 library(devtools)
+
 # Instalar a partir do repositório online do CENAP
 install_github("ICMBio-CENAP/monitoraSSM", dependencies=TRUE)
+
 ```
 
 A partir daí o pacote pode ser carregado normalmente pela library
