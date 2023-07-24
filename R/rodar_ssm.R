@@ -8,6 +8,7 @@
 #' rodar_ssm()
 #' @import tidyverse
 #' @import R2jags
+#' @importFrom tidyverse %>%
 
 rodar_ssm <- function(monitora, pop) {
 

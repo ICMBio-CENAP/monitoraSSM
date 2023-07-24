@@ -7,7 +7,8 @@
 #' @export
 #' @examples
 #' verificar_cv()
-#'
+#' @import tidyverse
+#' @importFrom tidyverse %>%
 
 verificar_cv <- function(popsToUse = c(popsToUse)) {
 

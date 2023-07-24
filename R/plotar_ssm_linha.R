@@ -6,7 +6,8 @@
 #' Elildo Carvalho Jr
 #' @examples
 #' plotar_ssm_linha()
-#'
+#' @import tidyverse
+#' @importFrom tidyverse %>%
 
 # plotar tendencias temporais
 plotar_ssm_linha <- function() {

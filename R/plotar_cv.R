@@ -6,7 +6,8 @@
 #' Elildo Carvalho Jr
 #' @examples
 #' plotar_cv()
-#'
+#' @import tidyverse
+#' @importFrom tidyverse %>%
 
 # plotar tendencias temporais
 plotar_cv <- function() {

@@ -7,7 +7,8 @@
 #' @export
 #' @examples
 #' selecionar_uc_serie_min()
-#'
+#' @import tidyverse
+#' @importFrom tidyverse %>%
 
 selecionar_uc_serie_min <- function(monitora) {
 

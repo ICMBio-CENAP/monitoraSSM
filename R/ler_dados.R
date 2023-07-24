@@ -9,6 +9,7 @@
 #' ler_dados()
 #' @import tidyverse
 #' @import lubridate
+#' @importFrom tidyverse %>%
 
 
 ler_dados <- function(nome_arquivo = "Planilha MastoAves Consolidada ate 2022.csv") {

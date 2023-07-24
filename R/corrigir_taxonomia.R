@@ -7,7 +7,8 @@
 #' @export
 #' @examples
 #' corrigir_taxonomia()
-#'
+#' @import tidyverse
+#' @importFrom tidyverse %>%
 
 corrigir_taxonomia <- function(myData) {
 
