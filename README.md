@@ -4,8 +4,6 @@ Centro Nacional de Pesquisa e Conservação de Mamíferos Carnívoros, Instituto
 
 
 
-##Using the rlpi package
-
 ### Apresentação
 
 O **monitoraSSM** (versão beta) é um pacote para análise de dados do protocolo básico para aves e mamíferos do Programa Monitora ICMBio.
