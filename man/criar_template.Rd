@@ -17,5 +17,4 @@ Funçao para criar template com NAs para anos sem dados
 }
 \examples{
 criar_template()
-
 }

@@ -14,7 +14,6 @@ Funçao para plotar media geometrica
 }
 \examples{
 plotar_G()
-
 }
 \author{
 Elildo Carvalho Jr

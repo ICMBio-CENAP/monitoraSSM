@@ -14,7 +14,6 @@ Funçao para plotar taxa de crescimento r
 }
 \examples{
 plotar_r()
-
 }
 \author{
 Elildo Carvalho Jr

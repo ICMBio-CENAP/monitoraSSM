@@ -17,7 +17,6 @@ Funçao para verificar CV das taxas de encontro usando bootstrap
 }
 \examples{
 verificar_cv()
-
 }
 \author{
 Elildo Carvalho Jr

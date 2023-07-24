@@ -17,7 +17,6 @@ funcao para selecionar populacoes com taxa de encontro medio > valor especificad
 }
 \examples{
 selecionar_pops_taxa_min()
-
 }
 \author{
 Elildo Carvalho Jr

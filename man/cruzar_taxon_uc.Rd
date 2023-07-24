@@ -17,7 +17,6 @@ Funçao para limpar dados do Monitora
 }
 \examples{
 cruzar_taxon_uc()
-
 }
 \author{
 Elildo Carvalho Jr

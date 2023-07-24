@@ -14,5 +14,4 @@ Funçao para rodar modelo SSM no jags
 }
 \examples{
 grafico_pizza()
-
 }

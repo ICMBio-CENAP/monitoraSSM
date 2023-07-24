@@ -17,7 +17,6 @@ Funçao para limpar dados do Monitora
 }
 \examples{
 corrigir_taxonomia()
-
 }
 \author{
 Elildo Carvalho Jr

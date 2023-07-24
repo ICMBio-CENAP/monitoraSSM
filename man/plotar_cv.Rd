@@ -14,7 +14,6 @@ Funçao para plotar CV como funcao do esforco
 }
 \examples{
 plotar_cv()
-
 }
 \author{
 Elildo Carvalho Jr

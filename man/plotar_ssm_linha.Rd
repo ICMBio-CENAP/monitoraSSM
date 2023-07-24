@@ -14,7 +14,6 @@ Funçao para plotar tendencias temporais formato linhas e ribbon
 }
 \examples{
 plotar_ssm_linha()
-
 }
 \author{
 Elildo Carvalho Jr

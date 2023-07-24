@@ -17,7 +17,6 @@ função para selecionar UCS com serie temporal >= 5 anos
 }
 \examples{
 selecionar_uc_serie_min()
-
 }
 \author{
 Elildo Carvalho Jr

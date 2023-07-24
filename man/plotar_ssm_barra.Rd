@@ -14,7 +14,6 @@ Funçao para plotar tendencias temporais formato barras
 }
 \examples{
 plotar_ssm_barra()
-
 }
 \author{
 Elildo Carvalho Jr
