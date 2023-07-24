@@ -13,7 +13,7 @@ O pacote tem funções para limpeza de dados brutos, análise de tendências pop
 
 ### Instalar o pacote e exemplos
 
-Primeiramente, instalar o pacote devtools para permitir a isntalação a partir do github:
+Primeiramente, instalar o pacote devtools para permitir instalação a partir do github:
 
 
 ```r
