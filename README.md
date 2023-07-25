@@ -37,6 +37,7 @@ A partir daí o pacote pode ser carregado normalmente pela library
 # Load library
 library(monitoraSSM)
 library(tidyverse)
+library(here)
 
 ```
 
