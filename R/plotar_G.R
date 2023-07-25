@@ -33,7 +33,7 @@ plotar_G <- function() {
     theme(axis.text.x = element_text(size = 12)) +
     theme(axis.text.y = element_text(size = 12)) +
     theme(legend.position="none") +
-    coord_cartesian(ylim = c(0.75, 1.25))
+    coord_cartesian(ylim = c(0, 2))
 }
 
 
