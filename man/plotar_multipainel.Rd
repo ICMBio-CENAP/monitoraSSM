@@ -4,7 +4,7 @@
 \alias{plotar_multipainel}
 \title{Funçao para plotar tendencias temporais formato barras}
 \usage{
-plotar_multipainel(tipo = c("uc", "r"), nome_uc)
+plotar_multipainel(tipo = c("uc", "r"), nome_uc, n_colunas = 2)
 }
 \value{
 grafico de tendencias temporais

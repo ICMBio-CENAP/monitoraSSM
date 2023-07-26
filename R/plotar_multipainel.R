@@ -11,7 +11,7 @@
 #' @import tidyverse
 
 # plotar tendencias temporais
-plotar_multipainel <- function(tipo = c("uc", "r"), nome_uc) {
+plotar_multipainel <- function(tipo = c("uc", "r"), nome_uc, n_colunas = 2) {
 
   if(tipo == "uc") {
     ssm_data <- est_abund %>%
@@ -37,7 +37,7 @@ plotar_multipainel <- function(tipo = c("uc", "r"), nome_uc) {
     geom_ribbon(aes(ymin = lower025, ymax = upper975), fill="steelblue", alpha=0.2) +
     xlab("Ano") +
     ylab("Abundância relativa") +
-    facet_wrap(~ populacao, ncol=3, scales = "free") +
+    facet_wrap(~ populacao, ncol=n_colunas, scales = "free") +
     scale_x_continuous(limits = c(2014, 2022)) +
     theme_classic() +
     theme(axis.title.y = element_text(size = 8))  +
