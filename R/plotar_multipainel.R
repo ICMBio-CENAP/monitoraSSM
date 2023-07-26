@@ -39,6 +39,7 @@ plotar_multipainel <- function(tipo = c("uc", "r"), nome_uc, n_colunas = 2) {
     ylab("Abundância relativa") +
     facet_wrap(~ populacao, ncol=n_colunas, scales = "free") +
     scale_x_continuous(limits = c(2014, 2022)) +
+    expand_limits(y=0) +
     theme_classic() +
     theme(axis.title.y = element_text(size = 8))  +
     theme(axis.text.x = element_text(size = 8)) +
