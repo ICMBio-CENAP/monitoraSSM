@@ -14,7 +14,7 @@ corrigir_nome_uc <- function(myData) {
     mutate(
       uc = case_when(
         uc == "Parna da Serra da Cutia" ~ "Parna Serra da Cutia",
-        uc == "Resex do Rio Ouro Preto" ~ "Resex do Rio Ouro Preto",
+        uc == "Resex do Rio Ouro Preto" ~ "Resex Rio Ouro Preto",
         TRUE ~ uc))
 
   assign("myData", myData, envir = .GlobalEnv)
