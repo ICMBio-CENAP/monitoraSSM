@@ -88,6 +88,9 @@ ler_dados <- function(nome_arquivo = "Planilha MastoAves Consolidada ate 2022.cs
       is.na(taxon_validado) ~ NA,
       TRUE ~ populacao))
 
+  # remover linhas so de NAs
+  myData <-  myData %>% filter_all(any_vars(!is.na(.)))
+
   assign("myData", myData, envir = .GlobalEnv)
 
 }

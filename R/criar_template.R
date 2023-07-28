@@ -12,10 +12,10 @@ criar_template <- function(monitora, pop) {
   all_years <- tibble(ano =
                         seq(from = monitora %>%
                               filter(cnuc %in% cnuc[populacao == pop] ) %>%
-                              summarize(min(ano)) %>% pull(),
+                              summarize(min(ano, na.rm = TRUE)) %>% pull(),
                             to = monitora %>%
                               filter(cnuc %in% cnuc[populacao == pop] ) %>%
-                              summarize(max(ano)) %>% pull() ))
+                              summarize(max(ano, na.rm = TRUE)) %>% pull() ))
 
   sampled_years <- monitora %>%
     filter(cnuc %in% cnuc[populacao == pop] ) %>%
