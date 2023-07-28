@@ -68,8 +68,8 @@ plotar_r()
 
 ```
 
-## Nota sobre o uso dos dados
+### Nota sobre o uso dos dados
 
-A política de dados do Programa Monitora está descrita na Instrução Normativa ICMBio 02/2022. Destaca-se que os dados provenientes da aplicação de protocolos básicos de alvos globais serão de acesso público após a etapa de validação. dEsta forma, os dados de 2014 a 2018 são públicos, ao passo que os dados de 2019 em diante são de uso restrito.
+A política de dados do Programa Monitora está descrita na [Instrução Normativa ICMBio 02/2022](https://www.gov.br/icmbio/pt-br/assuntos/monitoramento/IN2_2022_fev.pdf). Destaca-se que os dados provenientes da aplicação de protocolos básicos de alvos globais serão de acesso público após a etapa de validação. desta forma, os [dados de 2014 a 2018 são públicos](https://www.gov.br/icmbio/pt-br/assuntos/monitoramento/conteudo/dados/dados-alvos-globais-protocolos-basico-componente-florestal.xlsx/view), ao passo que os dados de 2019 em diante são de uso restrito.
 
 Forma de citação dos dados: Monitora; Sampaio, A.B.; Alonso, A.C.; Iserhard, C.A.; Ribeiro, D.B.; Andrade, D.F.C.;  Carvalho Junior, E.A.R.; Buss, G.; Souza, J.M.; Ribeiro, K.T.; Mende, K.R.; Reis, M.L.; Fialho, M.S.; Marini Filho, O.J.; Galuppo, S.C.; Souza, T.C. Programa Nacional de Monitoramento da Biodiversidade - Programa Monitora, subprograma Terrestre, componente Florestal: relatório 2014-2018. Brasília, DF: ICMBio, 2021.

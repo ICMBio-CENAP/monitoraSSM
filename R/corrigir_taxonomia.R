@@ -112,6 +112,7 @@ corrigir_taxonomia <- function(myData) {
         taxon_validado == "Pitheciidae" ~ NA,
         taxon_validado == "Ptheciidae" ~ NA,
         taxon_validado == "Primates" ~ NA,
+        taxon_validado == "Rodentia" ~ NA,
         taxon_validado == "Sciuridae" ~ NA,
         is.na(taxon_validado) & genero == "Atelocynus" ~ "Atelocynus microtis",
         is.na(taxon_validado) & genero == "Pecari" ~ "Pecari tajacu",
