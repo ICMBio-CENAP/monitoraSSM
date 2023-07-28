@@ -55,7 +55,7 @@ rodar_ssm <- function(monitora, pop) {
 
   # chamar o JAGS a partir do R
   ssm <- jags(jags.data, inits=NULL,
-              parameters, here("R", "ssm.jags"),
+              parameters, here("data", "ssm.txt"),
               n.chains = nc, n.thin = nt, n.iter = ni, n.burnin = nb)
 
   # checar resultados
