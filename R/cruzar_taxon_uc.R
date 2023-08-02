@@ -14,7 +14,7 @@ cruzar_taxon_uc <- function(myData) {
     myData <- myData %>%
       dplyr::mutate(
         taxon_validado = case_when(
-          uc == "Esec Niquiá" & taxon_validado == "Chiropotes sagulatus" ~ "Chiropotes chiropotes",
+          uc == "Esec de Niquiá" & taxon_validado == "Chiropotes sagulatus" ~ "Chiropotes chiropotes",
           uc == "Esec do Rio Acre" & taxon_validado == "Alouatta seniculus" ~ "Alouatta puruensis",
           uc == "Esec da Terra do Meio/Resex Iriri" & taxon_validado == "Mico sp" ~ "Mico emiliae",
           uc == "Flona do Tapajós" & taxon_validado == "Mico argentatus" ~ "Mico spp",
@@ -27,7 +27,6 @@ cruzar_taxon_uc <- function(myData) {
           uc == "Parna da Amazônia" & taxon_validado == "Callicebus hoffmannsi" ~ "Callicebus spp",
           uc == "Parna da Amazônia" & taxon_validado == "Callicebus sp" ~ "Callicebus spp",
           uc == "Parna da Amazônia" & taxon_validado == "Mico sp" ~ "Mico humeralifer",
-          uc == "Parna da Serra da Mocidade" & taxon_validado == "Chiropotes chiropotes" ~ "Chiropotes sagulatus",
           uc == "Parna da Serra do Pardo" & taxon_validado == "Mico sp" ~ "Mico emiliae",
           uc == "Parna de Pacaás Novos" & taxon_validado == "Alouatta seniculus" ~ "Alouatta puruensis",
           uc == "Parna de Pacaás Novos" & taxon_validado == "Dasyprocta prymnolopha" ~ "Dasyprocta fuliginosa",
@@ -45,10 +44,12 @@ cruzar_taxon_uc <- function(myData) {
           #uc == "Parna do Juruena" & taxon_validado == "Psophia viridis" ~ "Psophia sp",
           uc == "Parna do Juruena" & taxon_validado == "Urosciurus sp" ~ "Urosciurus spadiceus",
           #uc == "Parna do Viruá" & familia == "Sciuridae" ~ NA,
+          uc == "Parna do Viruá" & familia == "Sciuridae" ~ "Sciuridae",
           uc == "Parna dos Campos Amazonicos" & taxon_validado == "Callicebus sp" ~ "Callicebus bernhardi",
           uc == "Parna Nascentes do Lago Jari" & taxon_validado == "Callicebus dubius" ~ "Callicebus caligatus",
           uc == "Parna Serra da Cutia" & taxon_validado == "Dasyprocta sp" ~ "Dasyprocta fuliginosa",
           uc == "Parna Serra da Mocidade" & taxon_validado == "Chiropotes sagulatus" ~ "Chiropotes chiropotes",
+          uc == "Parna Serra da Mocidade" & taxon_validado == "Dasyprocta leporina" ~ "Dasyprocta fuliginosa",
           uc == "Parna Serra da Mocidade" & taxon_validado == "Dasyprocta sp" ~ "Dasyprocta fuliginosa",
           uc == "Rebio do Jaru" & taxon_validado == "Callicebus bernhardi" ~ "Callicebus spp",
           uc == "Rebio do Jaru" & taxon_validado == "Callicebus brunneus" ~ "Callicebus spp",
@@ -74,7 +75,8 @@ cruzar_taxon_uc <- function(myData) {
           uc == "Resex Tapajós-Arapiuns" & familia == "Sciuridae" ~ "Sciuridae",
           uc == "Resex do Cazumbá-Iracema" & taxon_validado == "Dasyprocta leporina" ~ "Dasyprocta fuliginosa",
           uc == "Resex do Cazumbá-Iracema" & taxon_validado == "Dasyprocta sp" ~ "Dasyprocta fuliginosa",
-          taxon_validado == "Tinamus major" ~ "Tinamus sp",
+          uc == "Resex do Cazumbá-Iracema" & taxon_validado == "Tapirus kabomani" ~ "Tapirus terrestris",
+          #taxon_validado == "Tinamus major" ~ "Tinamus sp",
           TRUE ~ taxon_validado),
         genero = case_when(
         #uc == "Parna da Amazônia" & familia == "Sciuridae" ~ NA,
