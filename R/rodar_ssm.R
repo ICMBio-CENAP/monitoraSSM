@@ -48,9 +48,9 @@ rodar_ssm <- function(monitora, pop) {
 
 
   # definicoes MCMC
-  ni <- 25000
-  nt <- 50
-  nb <- 5000
+  ni <- 50000
+  nt <- 20
+  nb <- 25000
   nc <- 3
 
   # especificar modelo na linguagem JAGS
