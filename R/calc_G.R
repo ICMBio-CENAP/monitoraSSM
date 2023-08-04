@@ -19,7 +19,7 @@ calc_G <- function(x) {
   for(sample in 1:1000) {
 
     TS_sample <- slice_sample(TS,
-                              n = round(nrow(TS)/1.1), # cerca de 90%
+                              n = round(nrow(TS)/1.33), # cerca de 90%
                               replace = FALSE)
     tabela_G <- tibble(ano = min(est_abund$ano):max(est_abund$ano),
                        G = as.numeric(NA))
