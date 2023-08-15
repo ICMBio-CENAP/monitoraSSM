@@ -65,6 +65,7 @@ cruzar_taxon_uc <- function(myData) {
           uc == "Resex Ipaú-Anilzinho" & taxon_validado == "Dasyprocta sp" ~ "Dasyprocta fuliginosa",
           uc == "Resex Ipaú-Anilzinho" & taxon_validado == "Guerlinguetus sp" ~ "Guerlinguetus aestuans",
           uc == "Resex Rio Ouro Preto" & taxon_validado == "Dasyprocta sp" ~ "Dasyprocta fuliginosa",
+          uc == "Resex Riozinho da Liberdade" & taxon_validado == "Alouatta seniculus" ~ "Alouatta puruensis",
           uc == "Resex Riozinho da Liberdade" & taxon_validado == "Dasyprocta leporina" ~ "Dasyprocta fuliginosa",
           uc == "Resex Riozinho da Liberdade" & taxon_validado == "Dasyprocta sp" ~ "Dasyprocta fuliginosa",
           uc == "Resex Riozinho da Liberdade" & taxon_validado == "Myoprocta sp" ~ "Myoprocta pratti",
