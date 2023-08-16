@@ -17,7 +17,8 @@ adicionar_bioma <- function(myData) {
     left_join(uc_table, by="cnuc") %>%
     relocate(c(sigla, biomaIBGE), .after = uc) %>%
     mutate(biomaIBGE = tolower(biomaIBGE)) %>%
-    mutate(biomaIBGE = str_to_title(biomaIBGE))
+    mutate(biomaIBGE = str_to_title(biomaIBGE)) %>%
+    rename(bioma = biomaIBGE)
 
     assign("myData", myData, envir = .GlobalEnv)
 }

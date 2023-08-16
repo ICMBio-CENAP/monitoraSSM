@@ -60,21 +60,15 @@ ler_dados <- function(nome_arquivo = "Planilha MastoAves Consolidada ate 2022.cs
     left_join(temp_esforco, by=c("cnuc", "ea", "ano", "data"))
 
   # caso ainda ocorram linhas sem esforco:
-  # obter esforco medio em cada trilha
+  # obter esforco medio em cada trilha...
   comprimento <- myData %>%
     distinct(uc, nome_ea, esforco) %>%
     drop_na() %>%
     group_by(uc, nome_ea) %>%
-    summarize(esforco_medio = mean(esforco))
-  # imputar esforco medio para as entradas sem info de esforco
-  #for(i in 1:nrow(myData)) {
-  #    ifelse(
-  #    is.na(pull(myData[i, "esforco"])),
-  #    myData[i, "esforco"] <-  pull(comprimento[which(comprimento$uc == pull(myData[i, "uc"]) &
-  #                                                     comprimento$nome_ea == pull(myData[i, "nome_ea"])),
-  #                                             "esforco_medio"]),
-  #    myData[i, "esforco"] <- myData[i, "esforco"] )
-  #}
+    summarize(esforco = mean(esforco))
+  # ...e imputar esforco medio para as entradas sem info de esforco
+  myData <- myData %>%
+    rows_patch(comprimento, by = c("uc", "nome_ea"))
 
   # remover entradas duplicadas
   myData <- myData %>%
