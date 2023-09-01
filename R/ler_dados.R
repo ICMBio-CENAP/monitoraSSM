@@ -38,16 +38,18 @@ ler_dados <- function(nome_arquivo = "Planilha MastoAves Consolidada ate 2022.cs
       nivel_taxon = "Clasificação taxonômica (espécie. gênero. família ou ordem)",
       n_animais = "n° de animais",
       distancia = "distância (m)     do animal em relação a trilha",
-      plaqueta = "marcação no transecto"
+      plaqueta = "marcação no transecto",
+      hora_avistamento = "horário do avistamento"
     ) %>%
     select(cnuc, uc, ea, nome_ea, esforco, data, ano,
            classe, ordem, familia, genero, taxon_validado,
-           nivel_taxon, n_animais, distancia, plaqueta) %>%
+           nivel_taxon, n_animais, distancia, plaqueta, hora_avistamento) %>%
     # ajustar formato de data
     dplyr::mutate(
       data = as.Date(data, "%d/%m/%Y"),
       ano = year(data),
-      esforco = esforco/1000
+      esforco = esforco/1000,
+      hora_avistamento = as.POSIXct(paste(data, hora_avistamento), format = "%Y-%m-%d %H:%M:%OS")
     )
 
 
@@ -72,7 +74,9 @@ ler_dados <- function(nome_arquivo = "Planilha MastoAves Consolidada ate 2022.cs
 
   # remover entradas duplicadas
   myData <- myData %>%
-    distinct(uc, ea, data, taxon_validado, n_animais, distancia, plaqueta, .keep_all = TRUE)
+    distinct(uc, ea, data, taxon_validado, n_animais,
+             distancia, plaqueta, hora_avistamento,
+             .keep_all = TRUE)
 
   # criar coluna populacao
   myData <- myData %>%
