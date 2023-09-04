@@ -78,17 +78,23 @@ rodar_ssm2 <- function(monitora, pop) {
   }
 
   # priors
+  for(j in 1:nsites) {
+  N_est[1,j] ~ dunif(0, 3)  # populacao inicial
+  }
+  mean_r ~ dnorm(0, 0.001)  # taxa de crescimento medio
+
+  # priors
   # populacao ano 1
   # populacao em cada trilha = N_medio_UC + variacao aleatoria
   # taxa de crescimento em cada trilha = r_medio + variacao aleatoria
-  for(j in 1:nsites) {
-    eps_pop_site[j] ~ dnorm(0, tau_site) # variacao aleatoria entre trilhas
-    N_est[1,j] <- N_media_UC_ano_1 + eps_pop_site[j] # populacao inicial em cada trilha
-  }
-  mean_r ~ dnorm(0, 0.001)
-  N_media_UC_ano_1 ~ dnorm(1, 0.001)
-  tau_site <- 1/(sd_eps_site*sd_eps_site)
-  sd_eps_site ~ dunif(0,3)
+  #for(j in 1:nsites) {
+  #  eps_pop_site[j] ~ dnorm(0, tau_site) # variacao aleatoria entre trilhas
+  #  N_est[1,j] <- N_media_UC_ano_1 + eps_pop_site[j] # populacao inicial em cada trilha
+  #}
+  #mean_r ~ dnorm(0, 0.001)
+  #N_media_UC_ano_1 ~ dnorm(1, 0.001)
+  #tau_site <- 1/(sd_eps_site*sd_eps_site)
+  #sd_eps_site ~ dunif(0,3)
 
   # sd do processo de estado
   sigma_proc ~ dunif(0, 1)
