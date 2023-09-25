@@ -3,19 +3,21 @@
 #' @param myData Nome do arquivo de myData
 #' @returns myData com nome de UCs corrigidos
 #' @export
+#' @author
+#' Jorge Mario Herrera Lopera
 #' @examples
 #' corrigir_nome_uc()
 #' @import tidyverse
 
+# contato: mario.herreralopera@gmail.com - Ilhéus - BA, setembro de 2023
+
 corrigir_nome_uc <- function(myData) {
 
-  # padronizar "sp"
-  myData <- myData %>%
-    mutate(
-      uc = case_when(
-        uc == "Parna da Serra da Cutia" ~ "Parna Serra da Cutia",
-        uc == "Resex do Rio Ouro Preto" ~ "Resex Rio Ouro Preto",
-        TRUE ~ uc))
+  myData_cor <- left_join(myData, codname %>% select(cnuc, uc_cor), by = "cnuc") ## Selecionar a coluna de código em ambos os bancos de dados.
+  # Selecionar a coluna do nome corrigido
+  uc_cor <- myData_cor$uc_cor
+  # Substituir a coluna de nome no banco de dados original
+  myData$uc <- uc_cor
 
   assign("myData", myData, envir = .GlobalEnv)
 
