@@ -30,10 +30,10 @@ corrigir_taxonomia <- function(myData) {
         is.na(familia) & taxon_validado == "Cebidae" ~ "Cebidae",
         is.na(familia) & taxon_validado == "Pitheciidae" ~ "Pitheciidae",
         is.na(familia) & taxon_validado == "Ptheciidae" ~ "Pitheciidae",
-        is.na(familia) & taxon_validado == "Dsyprocta" ~ "Dasyproctidae",
         is.na(familia) & taxon_validado == "Sciuridae" ~ "Sciuridae",
         is.na(familia) & taxon_validado == "Cervidae" ~ "Cervidae",
         is.na(familia) & taxon_validado == "Tayassuidae" ~ "Tayassuidae",
+        taxon_validado == "Dsyprocta fuliginosa" ~ "Dasyproctidae",
         TRUE ~ familia)) %>%
     # genero
     mutate(
@@ -54,6 +54,7 @@ corrigir_taxonomia <- function(myData) {
         genero == "Artiodactyla" ~ NA,
         genero == "Cervidae" ~ NA,
         genero == "Tayassuidae" ~ NA,
+        genero == "Dsyprocta" ~ "Dasyprocta",
         TRUE ~ genero)) %>%
     # taxon_validado
     mutate(
