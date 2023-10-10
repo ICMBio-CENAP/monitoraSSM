@@ -5,54 +5,54 @@
   ## Likelihood
 
   # modelo de observacao
-  # observacao resulta do tamanho populacao + erro de observacao aleatorio
+  # cada observacao resulta do tamanho da populacao + ruido aleatorio
   for(i in 1:nobs) {
-    y[i,3] ~ dnorm(N_est[year[y[i,1]], y[i,2]], tau_obs)
+    y[i,3] ~ dnorm(exp(logN_est[year[y[i,1]], y[i,2]]), tau_obs)
     }
 
   # modelo de estado
-  # populacao resulta da populacao no ano anterior * taxa de
-  # crescimento com variacao aleatoria
+  # cada populacao resulta da populacao no ano anterior * taxa de
+  # crescimento + flutuacoes estocasticas
   for (year in 1:(nyears-1)){
   for(j in 1:nsites) {
+    #r[year,j] ~ dnorm(0, tau_proc)
     r[year,j] ~ dnorm(mean_r, tau_proc)
-    N_est[year+1,j] <- N_est[year,j]*exp(r[year,j])
+    logN_est[year+1,j] <- logN_est[year,j] + r[year,j]
     }
   }
 
   # priors
-  for(j in 1:nsites) {
-  N_est[1,j] ~ dunif(0, 3)  # populacao inicial
-  }
-  mean_r ~ dnorm(0, 0.001)  # taxa de crescimento medio
-
-  # priors
-  # populacao ano 1
-  # populacao em cada trilha = N_medio_UC + variacao aleatoria
-  # taxa de crescimento em cada trilha = r_medio + variacao aleatoria
   #for(j in 1:nsites) {
-  #  eps_pop_site[j] ~ dnorm(0, tau_site) # variacao aleatoria entre trilhas
-  #  N_est[1,j] <- N_media_UC_ano_1 + eps_pop_site[j] # populacao inicial em cada trilha
+  #logN_est[1,j] ~ dunif(0, 2)  # populacao inicial
+  #mean_r[j] ~ dnorm(1, 0.001)  # taxa de crescimento medio
   #}
-  #mean_r ~ dnorm(0, 0.001)
-  #N_media_UC_ano_1 ~ dnorm(1, 0.001)
-  #tau_site <- 1/(sd_eps_site*sd_eps_site)
-  #sd_eps_site ~ dunif(0,3)
 
-  # sd do processo de estado
-  sigma_proc ~ dunif(0, 1)
+  # prior alternativo para populacao inicial:
+  # para cada trilha, N = N_medio_UC + variacao estocastica
+  # para cada trilha, r = r_medio + variacao estocastica (random walk)
+  for(j in 1:nsites) {
+    eps_pop_site[j] ~ dnorm(0, tau_site) # variacao estocastica no N entre trilhas
+    logN_est[1,j] <- logN_media_UC_ano_1 + eps_pop_site[j] # populacao inicial de cada trilha
+  }
+  mean_r ~ dnorm(1, 0.001)
+  logN_media_UC_ano_1 ~ dnorm(1.5, 0.001)
+  tau_site <- 1/(sd_eps_site*sd_eps_site)
+  sd_eps_site ~ dunif(0,3)
+
+  sigma_proc ~ dunif(0, 1) # sd do processo de estado
   tau_proc <- pow(sigma_proc, -2)
 
-  # sd do processo de observacao
-  sigma_obs ~ dunif(0, 1)
+  sigma_obs ~ dunif(0, 1)  # sd do processo de observacao
   tau_obs <- pow(sigma_obs, -2)
 
   # parametros derivados
   for(i in 1:nyears) {
-    N_uc[i] <- mean(N_est[i,]) # media anua das trilhas
+    N_est[i] <- exp(mean(logN_est[i,])) # populacao a cada ano (media das trilhas)
   }
+  #r_mean <- mean(r) # r media geral
   r_mean <- mean_r
-  cv <- sd(N_uc)/mean(N_uc)
+
+  cv <- sd(N_est)/mean(N_est)
 
   # avaliar ajuste do modelo usando discrepancia do Chi-quadrado
 
