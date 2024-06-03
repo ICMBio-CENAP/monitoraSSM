@@ -14,7 +14,7 @@ atribuir_spp <- function(myData){
 
   # Carregar o banco de dados "monitora"
 
-  load("monitora.RData")
+  #load("monitora.RData")
 
   # Contar o número de "taxon_validado" para cada combinação exclusiva de "genero" e "cnuc".
 
