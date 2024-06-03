@@ -5,7 +5,7 @@
 #' @author
 #' Jorge Mario Herrera Lopera
 #' @examples
-#' atribuir_especies()
+#' atribuir_spp()
 #' @import tidyverse
 #' @import stringr
 

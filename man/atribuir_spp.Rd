@@ -13,7 +13,7 @@ especies atribuidas
 Atribuir epiteto especifico com base na lista de spp previamente registradas na UC
 }
 \examples{
-atribuir_especies()
+atribuir_spp()
 }
 \author{
 Jorge Mario Herrera Lopera
