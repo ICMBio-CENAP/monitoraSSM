@@ -71,7 +71,8 @@ atribuir_spp <- function(myData){
       by = c("cnuc", "genero")
     ) %>%
     mutate(
-      taxon_validado_mod = ifelse(!is.na(taxon_validado.y), taxon_validado.y, taxon_validado.x),
+      taxon_validado_mod = case_when(!is.na(taxon_validado.y) ~ taxon_validado.y,
+                                     .default =  taxon_validado.x),
       observaciones = case_when(
         !is.na(taxon_validado.y) & taxon_validado.x != taxon_validado.y ~ "assigned",
         is.na(taxon_validado.y) & !duplicated(taxon_validado.x) ~ "new record",
